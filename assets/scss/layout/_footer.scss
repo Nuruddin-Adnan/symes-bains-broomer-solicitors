@@ -1,0 +1,38 @@
+.footer {
+    padding-top: 80px;
+    background-color: #404040;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  
+    
+    .footer-menu {
+      .nav-link {
+        transition: all 0.2s linear;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    .copyright {
+      padding: 20px 0 20px 0;
+      // background-color: darken(#404040, 5);
+  
+      .social-nav {
+        display: flex;
+  
+        a {
+          margin: 10px;
+          transition: all 0.2s linear;
+  
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+  

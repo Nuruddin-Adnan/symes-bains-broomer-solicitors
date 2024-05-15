@@ -1,0 +1,36 @@
+@use '../abstracts/variables';
+.btn {
+    border-radius: 4px;
+}
+
+.primary-button {
+    background-color: variables.$color-primary; 
+    color: #fff;
+    
+    &:hover {
+        background-color: lighten(variables.$color-primary, 10); 
+        color: #fff;
+    }
+}
+
+.primary-outline-button {
+    background-color: white; 
+    color:variables.$color-primary;
+    border-color: variables.$color-primary;
+    
+    &:hover {
+        background-color: variables.$color-primary;
+        color: #fff;
+    }
+}
+
+.white-outline-button {
+    background-color: transparent; 
+    color: #fff;
+    border-color: #fff;
+    
+    &:hover {
+        background-color: #fff;
+        color: variables.$color-primary;
+    }
+}

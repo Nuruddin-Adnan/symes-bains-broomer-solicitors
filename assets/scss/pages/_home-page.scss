@@ -1,0 +1,203 @@
+@use '../abstracts/variables';
+
+.home-page {
+    .banner {
+        @media (min-width: 1200px) {
+            min-height: calc(100vh - 116px);
+        }
+    }
+
+    .feature-section {
+        background-color: #F4F4F4;
+        .card {
+           &.item-1 {
+            background: #4c2d5f;
+           }
+           &.item-2 {
+            background: #fd7d24;
+           }
+           &.item-3 {
+            background: #aa7000;
+           }
+           color: #fff;
+           border-radius: 8px;
+           border-color: currentColor;
+
+           &::before {
+            content: '';
+            width: 150%;
+            height: 40%;
+            position: absolute;
+            bottom: 0;
+            left: -30%;
+            z-index: 1;
+            transform: rotate(-7deg);    
+           }
+
+           &.item-1::before {
+            background-color: #553867;
+           }
+            &.item-2::before {
+              background-color: #fd832f;
+           }
+            &.item-3::before {
+              background-color: #ae770d;
+           }
+
+           &::after {
+            content: '';
+            width: 150%;
+            height: 50%;
+            position: absolute;
+            bottom: -25%;
+            left: -30%;
+            z-index: 1;
+            transform: rotate(-7deg);
+           }
+
+           &.item-1::after {
+            background-color: #664c76;
+            }
+            &.item-2::after {
+                background-color: #fd8f44;
+            }
+            &.item-3::after {
+                background-color: #b68425;
+            }
+        }
+    }
+
+    .trusted-guidance {
+        background-color: #1C3664;
+        .trusted-card {
+            background-color: #27406C;
+            border-radius: 12px;
+
+            .description {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+            }
+
+            .icon {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                background-color: rgba(#fff, 0.2);
+                display: grid;
+                place-items: center;
+    
+                i {
+                    font-size: 28px;
+                    color: #FFFA8C;
+
+                    @media (max-width: 991px) {
+                        font-size: 24px;
+                    }
+                }
+    
+                @media (max-width: 991px) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            &:hover {
+                background-color: #315593;
+
+                .icon {
+                    background-color: #FFFA8C;
+                    i {
+                        color: #315593
+                    }
+                }
+            }
+        }
+    }
+
+    .testimonial {
+        .testimonial-card {
+            background-color: #F4F4F4;
+            border-top: 4px solid #1B4795;
+            border-radius: 8px;
+
+            .avatar img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+
+                @media (max-width: 1199px) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            .text {
+                margin-left: 1rem;
+                .user-name {
+                    font-weight: 700;
+                }
+                .user-designation{
+                    color: rgba(#131319, 0.8)
+                }
+            }
+
+            .comments {
+                margin-top: 1rem;
+                color: rgba(#131319, 0.9)
+            }
+        }
+    }
+
+
+
+  // contact-us start
+  .contact-us {
+    background: black url(../images/home-page/contact-us-bg.png) no-repeat center
+      center/cover;
+      padding: 80px 0;
+
+
+    .form-control {
+      &::placeholder {
+        font-size: 16px;
+        color: #b2b2b2;
+      }
+
+      &:focus {
+        box-shadow: none;
+        border-color: variables.$color-text-secondary;
+      }
+    }
+
+    textarea.form-control {
+        height: 100px;
+
+        @media (min-width: 1400px) {
+            height: 130px;
+        }
+    }
+  }
+  // End of contact-us
+
+  // blog section start
+  .blog {
+    padding: 80px 0;
+   
+    .more-btn {
+      font-weight: 500;
+      margin-top: 20px;
+
+      i {
+        transition: all 0.2s linear;
+      }
+      &:hover {
+        i {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+  //End of blog section
+}
