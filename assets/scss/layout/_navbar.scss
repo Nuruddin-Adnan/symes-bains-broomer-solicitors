@@ -9,6 +9,8 @@
     }
     
     .navbar-nav {
+        position: static;
+        z-index: 1;
        .nav-link {
            color: variables.$color-text-primary;
            display: inline-block;
@@ -23,8 +25,22 @@
             color: variables.$color-primary;
             text-decoration: underline;
            }
+    
+           &:hover {
+            color: variables.$color-primary;
+           }
         }
-   
+
+
+        @media (min-width: 992px) {
+         .megamenu {
+             &:hover > .dropdown-menu {
+                 display: block;
+                 top: calc(100% + 10px);
+                 left: 0;
+             }
+         }
+        }
    } 
 }
 

@@ -119,9 +119,24 @@ body {
   background-repeat: no-repeat;
   background-position: right top;
 }
+@media (min-width: 1600px) {
+  .banner {
+    background-image: none;
+  }
+}
 @media (max-width: 991px) {
   .banner {
     background-position: right bottom;
+  }
+}
+.banner .banner-content {
+  background-image: url(../images/home-page/banner-bg.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+@media (max-width: 1599px) {
+  .banner .banner-content {
+    background-image: none;
   }
 }
 .banner h1 {
@@ -174,6 +189,10 @@ body {
     max-width: 150px;
   }
 }
+.navbar-expand-lg .navbar-nav {
+  position: static;
+  z-index: 1;
+}
 .navbar-expand-lg .navbar-nav .nav-link {
   color: #131319;
   display: inline-block;
@@ -188,6 +207,16 @@ body {
 .navbar-expand-lg .navbar-nav .nav-link.active {
   color: #1B4795;
   text-decoration: underline;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: #1B4795;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .megamenu:hover > .dropdown-menu {
+    display: block;
+    top: calc(100% + 10px);
+    left: 0;
+  }
 }
 
 .footer {
@@ -220,9 +249,14 @@ body {
 
 /*===// end of layout css === */
 /*=== pages start === */
+.home-page .banner {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
 @media (min-width: 1200px) {
   .home-page .banner {
-    min-height: calc(100vh - 116px);
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 .home-page .feature-section {

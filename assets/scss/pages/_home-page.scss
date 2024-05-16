@@ -2,8 +2,11 @@
 
 .home-page {
     .banner {
+        padding-top: 30px;
+        padding-bottom: 40px;
         @media (min-width: 1200px) {
-            min-height: calc(100vh - 116px);
+            padding-top: 80px;
+            padding-bottom: 80px;
         }
     }
 

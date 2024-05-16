@@ -4,8 +4,21 @@
     background-repeat: no-repeat;
     background-position: right top;
 
+    @media (min-width: 1600px) {
+        background-image: none;
+    }
+
     @media (max-width: 991px) {
         background-position: right bottom;
+    }
+    .banner-content{
+        background-image: url(../images/home-page/banner-bg.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+    
+        @media (max-width: 1599px) {
+            background-image: none;
+        }
     }
 
     h1 {
